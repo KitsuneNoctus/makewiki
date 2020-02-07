@@ -15,7 +15,8 @@ class PageList(ListView):
 
     def get(self, request):
         """ Returns a list of wiki pages. """
-        pass
+        all_pages = Page.objects.all()
+        return render(request, 'wiki/list.html', all_pages)
 
 
 class PageDetailView(DetailView):
