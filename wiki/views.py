@@ -38,6 +38,7 @@ class PageDetailView(DetailView):
 
     def get(self, request, slug):
         """ Returns a specific of wiki page by slug. """
+        # return
         pass
 
     def post(self, request, slug):
