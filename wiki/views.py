@@ -6,6 +6,8 @@ from django.views.generic.detail import DetailView
 
 class PageList(ListView):
     """
+    This will show a list of all pages available for the user to read.
+    Currently does not link but getting there.
     CHALLENGES:
       1. On GET, display a homepage that shows all Pages in your wiki.
       2. Replace this CHALLENGE text with a descriptive docstring for PageList.
@@ -16,7 +18,7 @@ class PageList(ListView):
     def get(self, request):
         """ Returns a list of wiki pages. """
         all_pages = Page.objects.all()
-        return render(request, 'wiki/list.html', all_pages)
+        return render(request, 'wiki/list.html', {'all_pages':all_pages})
 
 
 class PageDetailView(DetailView):
