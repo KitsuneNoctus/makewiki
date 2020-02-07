@@ -8,10 +8,6 @@ class PageList(ListView):
     """
     This will show a list of all pages available for the user to read.
     Currently does not link but getting there.
-    CHALLENGES:
-      1. On GET, display a homepage that shows all Pages in your wiki.
-      2. Replace this CHALLENGE text with a descriptive docstring for PageList.
-      3. Replace pass below with the code to render a template named `list.html`.
     """
     model = Page
 
