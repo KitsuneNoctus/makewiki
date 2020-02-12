@@ -45,6 +45,10 @@ class PageDetailView(DetailView):
         """ Returns a specific of wiki page by slug. """
         # page = get_object_or_404(Question, pk=question_id) Try later
         page = Page.objects.get(slug=slug)
+
+        # page = get_object_or_404(Page, slug=slug)  This gives a nice error instead of a mess like with the
+        # line above
+
         return render(request, 'wiki/page.html', {'page':page})
         # return render(request, '')
         # pass
