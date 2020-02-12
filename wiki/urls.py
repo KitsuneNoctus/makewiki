@@ -1,6 +1,6 @@
 from django.urls import path
 
-from . import views
+from .views import *
 
 """
   CHALLENGES:
@@ -14,6 +14,7 @@ from . import views
   """
 
 urlpatterns = [
-    path('', views.PageList.as_view(), name='wiki-list-page'),
-    path('slug/', views.PageDetailView.as_view(), name='wiki-details-page'),
+    path('', PageList.as_view(), name='wiki-list-page'),
+    path('<str:slug>/', PageDetailView.as_view(), name='wiki-details-page'),
+    # <str:slug>/ the part slug is just the variale name and needs to match up with whats in views, doesn't need be called same as function
 ]

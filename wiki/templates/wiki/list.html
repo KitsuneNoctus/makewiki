@@ -1,10 +1,8 @@
+<h1>Wiki Pages</h1>
 {% if all_pages %}
     <ul>
     {% for page in all_pages %}
-    {% comment %}
-        <!-- <li><a href="{% url 'polls:detail' question.id %}"> {{ question.question_text }} <a></li> -->
-    {% endcomment %}
-        <li>{{ page.title }}</li>
+        <li><a href="{{ page.slug }}">{{ page.title }} <a></li>
     {% endfor %}
     <ul>
 {% else %}
